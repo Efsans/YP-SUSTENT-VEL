@@ -1,203 +1,1336 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Guia de Bem‑Estar Digital</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {
-      background: linear-gradient(120deg, #e0e7ff 0%, #f8fafc 100%);
-      font-family: 'Segoe UI', 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-      color: #222;
-    }
-    .container {
-      max-width: 760px;
-      margin: 48px auto;
-      background: #fff;
-      border-radius: 22px;
-      box-shadow: 0 8px 32px rgba(60,80,180,0.09);
-      padding: 44px 38px 36px 38px;
-      position: relative;
-    }
-    h1 {
-      text-align: center;
-      font-size: 2.7em;
-      margin-bottom: 16px;
-      color: #3a5fc9;
-      letter-spacing: -1px;
-      font-weight: 700;
-    }
-    .lead {
-      font-size: 1.18em;
-      line-height: 1.7;
-      color: #384050;
-      margin-bottom: 32px;
-      text-align: justify;
-    }
-    section {
-      margin-bottom: 32px;
-    }
-    .section-title {
-      font-size: 1.18em;
-      font-weight: 600;
-      margin-bottom: 12px;
-      color: #3a5fc9;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      letter-spacing: 0.2px;
-    }
-    ul, ol {
-      margin: 0;
-      padding-left: 24px;
-    }
-    li {
-      margin-bottom: 10px;
-      font-size: 1.07em;
-      color: #2b3140;
-    }
-    .app-list {
-      margin-top: 8px;
-      margin-bottom: 0;
-    }
-    .app-list li {
-      font-weight: 500;
-      color: #23448f;
-    }
-    .why-list {
-      margin-top: 8px;
-      font-size: 0.99em;
-      color: #384050;
-    }
-    .links {
-      margin-top: 8px;
-      font-size: 0.96em;
-      color: #3570b3;
-    }
-    .tips-list {
-      margin-top: 8px;
-      font-size: 1em;
-      color: #2b3140;
-      background: #f3f7ff;
-      border-radius: 10px;
-      padding: 18px 18px 10px 28px;
-      box-shadow: 0 2px 8px rgba(60,80,180,0.04);
-    }
-    .quote {
-      background: #eaf1ff;
-      border-left: 5px solid #3a5fc9;
-      padding: 16px 24px;
-      margin: 24px 0 18px 0;
-      font-style: italic;
-      color: #2b3140;
-      border-radius: 10px;
-      font-size: 1.08em;
-    }
-    .footer {
-      position: absolute;
-      bottom: 18px;
-      left: 0;
-      width: 100%;
-      text-align: center;
-      font-size: 13px;
-      color: #7a8bb7;
-      letter-spacing: 0.2px;
-    }
-    .highlight {
-      color: #3a5fc9;
-      font-weight: 600;
-    }
-    @media (max-width: 800px) {
-      .container {
-        margin: 18px 6px;
-        padding: 24px 8px 18px 8px;
-      }
-      h1 {
-        font-size: 2em;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Plataforma Ypê Sustentável - Guia prático para unir economia e sustentabilidade no seu comércio">
+    <title>Economia que Sustenta, Ação que Transforma | Ypê Sustentável</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-green: #2d8659;
+            --secondary-green: #4caf50;
+            --light-green: #e8f5e9;
+            --dark-green: #1b5e20;
+            --accent-orange: #ff9800;
+            --text-dark: #212121;
+            --text-light: #757575;
+            --bg-light: #fafafa;
+            --white: #ffffff;
+            --shadow: 0 2px 8px rgba(0,0,0,0.1);
+            --shadow-hover: 0 4px 16px rgba(0,0,0,0.15);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+            color: var(--white);
+            padding: 2rem 0;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo::before {
+            content: "🌱";
+            font-size: 2rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--dark-green) 100%);
+            color: var(--white);
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        /* Section Titles */
+        section {
+            margin-bottom: 5rem;
+            scroll-margin-top: 100px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--primary-green);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-header .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            font-weight: 300;
+        }
+
+        /* Cards Grid */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-left: 4px solid var(--secondary-green);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .card h3 {
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .card li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid var(--light-green);
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+        }
+
+        .card li:last-child {
+            border-bottom: none;
+        }
+
+        .card li::before {
+            content: "✓";
+            color: var(--secondary-green);
+            font-weight: bold;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, var(--light-green) 0%, transparent 100%);
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            font-weight: 600;
+            color: var(--dark-green);
+        }
+
+        /* Calculator Section */
+        .calculator-tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            border-bottom: 2px solid var(--light-green);
+        }
+
+        .calc-tab {
+            background: transparent;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-light);
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .calc-tab.active {
+            color: var(--primary-green);
+            border-bottom-color: var(--primary-green);
+        }
+
+        .calc-tab:hover {
+            color: var(--primary-green);
+        }
+
+        .calculator-panel {
+            display: none;
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        .calculator-panel.active {
+            display: block;
+        }
+
+        .calculator-panel h3 {
+            color: var(--primary-green);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            border-bottom: 2px solid var(--light-green);
+            padding-bottom: 1rem;
+        }
+
+        .calculator-panel .description {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+
+        .calc-inputs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .input-group {
+            background: var(--light-green);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary-green);
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            font-size: 0.95rem;
+        }
+
+        .input-group .input-help {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-top: 0.3rem;
+            font-style: italic;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 0.9rem;
+            border: 2px solid var(--light-green);
+            border-radius: 6px;
+            font-size: 1rem;
+            background: var(--white);
+            color: var(--text-dark);
+            transition: border-color 0.3s;
+        }
+
+        .input-group input:focus {
+            outline: none;
+            border-color: var(--secondary-green);
+        }
+
+        .calc-result {
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+            color: var(--white);
+            padding: 2.5rem;
+            border-radius: 12px;
+            margin-top: 2rem;
+            box-shadow: var(--shadow-hover);
+        }
+
+        .calc-result h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .calc-results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .calc-result-item {
+            background: rgba(255,255,255,0.15);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .calc-result-item .label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .calc-result-item .value {
+            font-size: 1.8rem;
+            font-weight: bold;
+            display: block;
+        }
+
+        .calc-result .total-box {
+            background: rgba(255,255,255,0.25);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+
+        .calc-result .total {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+
+        .calc-result .total-label {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        .calc-formula {
+            background: var(--light-green);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            border-left: 4px solid var(--primary-green);
+        }
+
+        .calc-formula strong {
+            color: var(--primary-green);
+        }
+
+        .btn {
+            background: var(--accent-orange);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        .btn:hover {
+            background: #f57c00;
+            transform: scale(1.05);
+        }
+
+        /* Testimonials */
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            border-top: 4px solid var(--accent-orange);
+            position: relative;
+        }
+
+        .testimonial::before {
+            content: '"';
+            font-size: 5rem;
+            color: var(--light-green);
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            line-height: 1;
+        }
+
+        .testimonial p {
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+
+        .testimonial .author {
+            font-weight: bold;
+            color: var(--primary-green);
+            text-align: right;
+        }
+
+        /* Resources */
+        .resources-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .resource-item {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--primary-green);
+        }
+
+        .resource-item h4 {
+            color: var(--primary-green);
+            margin-bottom: 0.5rem;
+        }
+
+        .resource-item p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Commitment Section */
+        .commitment {
+            background: linear-gradient(135deg, var(--light-green) 0%, var(--white) 100%);
+            padding: 4rem 2rem;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .commitment p {
+            font-size: 1.3rem;
+            line-height: 2;
+            color: var(--text-dark);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Stats */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .stat-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .stat-card .number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary-green);
+            display: block;
+        }
+
+        .stat-card .label {
+            color: var(--text-light);
+            margin-top: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-green);
+            color: var(--white);
+            text-align: center;
+            padding: 3rem 2rem;
+            margin-top: 5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .calc-inputs {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Icons */
+        .icon {
+            font-size: 1.5rem;
+            margin-right: 0.5rem;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Guia de Bem‑Estar Digital</h1>
-    <div class="lead">
-      Vivemos em uma era hiperconectada, na qual a tecnologia faz parte de cada aspecto do nosso dia a dia. Entre notificações, tarefas e redes sociais, é fácil sentir-se sobrecarregado — o que pode aumentar o estresse, ansiedade e prejudicar a qualidade do sono e da concentração. Mas e se a tecnologia, que tantas vezes parece ser parte do problema, também pudesse ser parte da solução?
-      <br><br>
-      O Guia de Bem-Estar Digital nasce desse propósito: reunir recomendações práticas, acessíveis e baseadas em pesquisas e experiências reais para transformar sua relação com o mundo digital. Aqui, você encontrará caminhos para usar a tecnologia de forma mais consciente, equilibrada e positiva, sem abrir mão da praticidade que ela oferece.
+    <header>
+        <nav>
+            <div class="logo">Ypê Sustentável</div>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#eficiencia">Eficiência</a></li>
+                <li><a href="#reducao">Redução</a></li>
+                <li><a href="#gestao">Gestão</a></li>
+                <li><a href="#incentivos">Incentivos</a></li>
+                <li><a href="#calculadora">Calculadora</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Economia que Sustenta, Ação que Transforma</h1>
+            <p>Bem-vindo à Plataforma Ypê Sustentável – seu guia prático para unir economia e sustentabilidade no seu comércio. Aqui, você encontra soluções reais para reduzir custos enquanto cuida do nosso bairro e do planeta. Todas as dicas foram testadas e aprovadas por comerciantes como você!</p>
+        </div>
+    </section>
+
+    <!-- Estatísticas -->
+    <div class="container">
+        <div class="stats">
+            <div class="stat-card">
+                <span class="number">80%</span>
+                <span class="label">Redução no consumo de energia com LED</span>
+            </div>
+            <div class="stat-card">
+                <span class="number">R$ 560</span>
+                <span class="label">Economia média mensal por comércio</span>
+            </div>
+            <div class="stat-card">
+                <span class="number">40%</span>
+                <span class="label">Redução de lixo orgânico com compostagem</span>
+            </div>
+            <div class="stat-card">
+                <span class="number">30%</span>
+                <span class="label">Desconto no ICMS Verde</span>
+            </div>
+        </div>
     </div>
 
-    <section>
-      <div class="section-title">⚙️ Princípios do nosso guia:</div>
-      <ul>
-        <li>A tecnologia, quando usada com intenção e propósito, pode ser uma grande aliada na busca pelo bem-estar.</li>
-        <li>Desconectar faz parte do processo: é importante criar espaços livres de telas e estímulos digitais, sem trocar uma distração por outra.</li>
-        <li>Soluções eficazes devem ser gratuitas, livres de anúncios, fáceis de usar e adaptáveis à rotina de qualquer pessoa, em qualquer lugar.</li>
-        <li>O equilíbrio digital é uma construção diária, feita de pequenas escolhas e hábitos.</li>
-      </ul>
+    <!-- EFICIÊNCIA ENERGÉTICA -->
+    <section id="eficiencia" class="container">
+        <div class="section-header">
+            <h2>💡 Eficiência Energética</h2>
+            <p class="subtitle">Gaste menos, Ilumine mais</p>
+        </div>
+
+        <div class="cards-grid">
+            <div class="card">
+                <h3><span class="icon">💡</span>A Revolução LED</h3>
+                <ul>
+                    <li>Trocar lâmpadas fluorescentes por LED pode reduzir até 80% da sua conta de luz</li>
+                    <li>Custo médio: R$ 15-30 por lâmpada</li>
+                    <li>Retorno do investimento: 3-6 meses</li>
+                    <li>Durabilidade: até 50.000 horas (10x mais que fluorescentes)</li>
+                </ul>
+                <div class="highlight">💰 Economia média: R$ 180/mês para comércio com 20 lâmpadas</div>
+            </div>
+
+            <div class="card">
+                <h3><span class="icon">⏰</span>Horário de Pico</h3>
+                <ul>
+                    <li>Evite usar equipamentos pesados entre 18h e 21h</li>
+                    <li>A energia é 20% mais cara neste período</li>
+                    <li>Programe atividades pesadas para horários fora de pico</li>
+                    <li>Economia imediata sem investimento adicional</li>
+                </ul>
+                <div class="highlight">💰 Economia média: R$ 80/mês</div>
+            </div>
+
+            <div class="card">
+                <h3><span class="icon">❄️</span>Ar Condicionado Inteligente</h3>
+                <ul>
+                    <li>Mantenha temperatura em 23°C (temperatura ideal)</li>
+                    <li>Cada grau a menos aumenta 7% do consumo</li>
+                    <li>Faça manutenção regular dos filtros</li>
+                    <li>Use cortinas e persianas para reduzir calor solar</li>
+                </ul>
+                <div class="highlight">💡 Dica: Use ventiladores como complemento para sensação de frescor</div>
+            </div>
+
+            <div class="card">
+                <h3><span class="icon">🏆</span>Selo Procel</h3>
+                <ul>
+                    <li>Na próxima compra de equipamentos, prefira os com Selo Procel A</li>
+                    <li>Eles consomem até 30% menos energia</li>
+                    <li>Maior eficiência = menor custo operacional</li>
+                    <li>Investimento que se paga rapidamente</li>
+                </ul>
+                <div class="highlight">🌱 Além de economizar, você protege o meio ambiente</div>
+            </div>
+        </div>
     </section>
 
-    <section>
-      <div class="section-title">💡 Dicas práticas para o dia a dia:</div>
-      <ul style="background:#f3f7ff;border-radius:10px;padding:16px 20px 10px 28px;box-shadow:0 2px 8px rgba(60,80,180,0.04);">
-        <li><b>Estabeleça horários:</b> Defina períodos do dia para checar redes sociais e e-mails.</li>
-        <li><b>Use o modo "Não Perturbe":</b> Ative em momentos de foco ou descanso.</li>
-        <li><b>Faça pausas regulares:</b> Levante-se, alongue-se e respire fundo a cada 60 minutos de uso intenso.</li>
-        <li><b>Desative notificações não essenciais:</b> Reduza distrações e ansiedade.</li>
-        <li><b>Crie uma rotina de sono saudável:</b> Evite telas pelo menos 30 minutos antes de dormir.</li>
-        <li><b>Pratique o detox digital:</b> Reserve um dia da semana para ficar longe das redes sociais.</li>
-        <li><b>Personalize seus aplicativos:</b> Use recursos de tempo de uso e limites diários.</li>
-        <li><b>Busque atividades offline:</b> Leia um livro, caminhe, pratique um hobby manual.</li>
-        <li><b>Converse sobre bem-estar digital:</b> Compartilhe dicas e experiências com amigos e familiares.</li>
-      </ul>
+    <!-- REDUÇÃO DE DESCARTÁVEIS -->
+    <section id="reducao" class="container">
+        <div class="section-header">
+            <h2>🔄 Redução de Descartáveis</h2>
+            <p class="subtitle">Do Desperdício à Economia</p>
+        </div>
+
+        <div class="cards-grid">
+            <div class="card">
+                <h3><span class="icon">☕</span>Copos Retornáveis</h3>
+                <ul>
+                    <li>Ofereça desconto de R$ 0,50 para clientes que trouxerem próprio copo</li>
+                    <li>Um comércio médio economiza R$ 300/mês</li>
+                    <li>Reduz impactos ambientais e custos operacionais</li>
+                    <li>Engaja clientes em práticas sustentáveis</li>
+                </ul>
+                <div class="highlight">📊 Redução de até 1.000 copos descartáveis por mês</div>
+            </div>
+
+            <div class="card">
+                <h3><span class="icon">📦</span>Embalagens Sustentáveis</h3>
+                <ul>
+                    <li>Substitua isopor por papelão ou bagaço de cana</li>
+                    <li>Custo similar, imagem melhorada</li>
+                    <li>Biodegradável e reciclável</li>
+                    <li>Valorização da marca perante clientes conscientes</li>
+                </ul>
+                <div class="highlight">🌱 Materiais sustentáveis atraem clientes preocupados com o meio ambiente</div>
+            </div>
+
+            <div class="card">
+                <h3><span class="icon">🛍️</span>Sacolas Retornáveis</h3>
+                <ul>
+                    <li>Venda sacolas de pano com a logo do seu comércio</li>
+                    <li>Custo: R$ 2-5 por unidade</li>
+                    <li>Valor de venda: R$ 5-10</li>
+                    <li>Marketing móvel e sustentável para sua marca</li>
+                </ul>
+                <div class="highlight">💰 Além de economizar, você gera receita adicional</div>
+            </div>
+        </div>
     </section>
 
-    <section>
-      <div class="section-title">📌 Aplicativos recomendados (100% gratuitos):</div>
-      <ul class="app-list">
-        <li><b>Medito</b> — Meditação guiada para iniciantes e avançados.</li>
-        <li><b>Smiling Mind</b> — Mindfulness para todas as idades.</li>
-        <li><b>Breathe2Relax</b> — Exercícios de respiração para aliviar o estresse.</li>
-        <li><b>Forest</b> — Ajuda a manter o foco plantando árvores virtuais.</li>
-        <li><b>Sleep Cycle</b> — Monitora e melhora a qualidade do sono.</li>
-        <li><b>Headspace</b> — Meditação e sono (versão gratuita com recursos limitados).</li>
-        <li><b>Focus To-Do</b> — Técnica Pomodoro para produtividade.</li>
-      </ul>
+    <!-- GESTÃO DE RESÍDUOS -->
+    <section id="gestao" class="container">
+        <div class="section-header">
+            <h2>📊 Gestão de Resíduos</h2>
+            <p class="subtitle">Do Lixo ao Lucro</p>
+        </div>
+
+        <div class="cards-grid">
+            <div class="card">
+                <h3><span class="icon">♻️</span>Coleta Seletiva</h3>
+                <ul>
+                    <li>A Prefeitura de São José dos Pinhais oferece coleta gratuita</li>
+                    <li>Separe plástico, papel e metal corretamente</li>
+                    <li>Facilita reciclagem e reduz impacto ambiental</li>
+                    <li>Contribui para economia circular local</li>
+                </ul>
+                <div class="highlight">✅ Serviço público gratuito que beneficia toda a comunidade</div>
+            </div>
+
+            <div class="card">
+                <h3><span class="icon">🌿</span>Compostagem</h3>
+                <ul>
+                    <li>Restos de alimentos viram adubo para horta ou jardim</li>
+                    <li>Redução de 40% no lixo orgânico</li>
+                    <li>Adubo natural gratuito para seu estabelecimento</li>
+                    <li>Reduz custos com coleta de lixo</li>
+                </ul>
+                <div class="highlight">🌱 Transforme desperdício em recursos valiosos</div>
+            </div>
+
+            <div class="card">
+                <h3><span class="icon">🛢️</span>Óleo de Cozinha</h3>
+                <ul>
+                    <li>Venda ou doe para cooperativas</li>
+                    <li>Cada litro vale R$ 1-2</li>
+                    <li>Evita contaminação da água (1 litro contamina 25.000 litros)</li>
+                    <li>Gera renda para cooperativas locais</li>
+                </ul>
+                <div class="highlight">💰 Além de proteger o meio ambiente, você pode gerar receita</div>
+            </div>
+        </div>
     </section>
 
-    <section>
-      <div class="section-title">🔍 Por que cuidar do bem-estar digital?</div>
-      <ul class="why-list">
-        <li>O uso excessivo de tecnologia pode levar a problemas de saúde mental, como ansiedade, depressão e insônia.</li>
-        <li>Estudos mostram que pausas regulares do digital melhoram a produtividade e a criatividade.</li>
-        <li>Uma relação equilibrada com a tecnologia promove um sono mais reparador e uma vida social mais rica.</li>
-        <li>O bem-estar digital contribui para maior autoconhecimento e controle emocional.</li>
-        <li>O excesso de telas pode afetar a saúde ocular e causar fadiga visual.</li>
-        <li>O uso consciente da tecnologia pode ajudar a prevenir o burnout digital.</li>
-      </ul>
-      <div style="background:#eaf1ff;border-left:5px solid #4a77c9;padding:14px 20px;margin:20px 0 14px 0;font-style:italic;color:#2b3140;border-radius:10px;font-size:1.05em;">
-        “A tecnologia é uma ferramenta poderosa — cabe a nós decidir como, quando e por que usá-la.”
-      </div>
+    <!-- INCENTIVOS E ECONOMIA -->
+    <section id="incentivos" class="container">
+        <div class="section-header">
+            <h2>💰 Incentivos e Economia</h2>
+            <p class="subtitle">O Governo te Ajuda a Economizar</p>
+        </div>
+
+        <div class="cards-grid">
+            <div class="card">
+                <h3><span class="icon">📋</span>Programa Microempreendedor</h3>
+                <ul>
+                    <li>Isenção de taxas para negócios sustentáveis</li>
+                    <li>Redução de custos burocráticos</li>
+                    <li>Fomento à economia verde local</li>
+                    <li>Consultoria e orientação disponível</li>
+                </ul>
+                <div class="highlight">✅ Menos impostos, mais investimento no seu negócio</div>
+            </div>
+
+            <div class="card">
+                <h3><span class="icon">💚</span>ICMS Verde</h3>
+                <ul>
+                    <li>Desconto de até 30% no ICMS para comércios com práticas ambientais</li>
+                    <li>Incentivo fiscal para sustentabilidade</li>
+                    <li>Economia significativa nos impostos</li>
+                    <li>Reconhecimento público das práticas sustentáveis</li>
+                </ul>
+                <div class="highlight">💰 Redução direta na carga tributária</div>
+            </div>
+
+            <div class="card">
+                <h3><span class="icon">🏅</span>Selo Verde Municipal</h3>
+                <ul>
+                    <li>Diferencial competitivo e marketing gratuito</li>
+                    <li>Reconhecimento público de práticas sustentáveis</li>
+                    <li>Atrai clientes conscientes</li>
+                    <li>Valorização da marca local</li>
+                </ul>
+                <div class="highlight">🌟 Destaque seu negócio como referência em sustentabilidade</div>
+            </div>
+        </div>
     </section>
 
-    <section>
-      <div class="section-title">🔗 Links úteis (foco em sites brasileiros):</div>
-      <ul class="links">
-        <li><a href="https://www.cvv.org.br/" target="_blank">CVV — Centro de Valorização da Vida</a></li>
-        <li><a href="https://clubcoworking.com.br/saude-mental-e-bem-estar-digital-como-equilibrar/" target="_blank">Club Coworking — Saúde mental e bem-estar digital: como equilibrar?</a></li>
-      </ul>
+    <!-- CALCULADORA DE ECONOMIA -->
+    <section id="calculadora" class="container">
+        <div class="section-header">
+            <h2>📈 Calculadora de Economia</h2>
+            <p class="subtitle">Calcule sua economia real com base em dados técnicos e fórmulas profissionais</p>
+        </div>
+
+        <div class="calculator-tabs">
+            <button class="calc-tab active" onclick="showCalculator('led', this)">💡 Economia LED</button>
+            <button class="calc-tab" onclick="showCalculator('copos', this)">☕ Copos Retornáveis</button>
+            <button class="calc-tab" onclick="showCalculator('horario', this)">⏰ Horário de Pico</button>
+        </div>
+
+        <!-- Calculadora LED -->
+        <div id="calc-led" class="calculator-panel active">
+            <h3>Calculadora de Economia com Lâmpadas LED</h3>
+            <p class="description">
+                Calcule a economia real ao substituir lâmpadas fluorescentes por LED. Esta calculadora utiliza fórmulas baseadas em potência elétrica, horas de uso e tarifa de energia para fornecer resultados precisos.
+            </p>
+
+            <div class="calc-inputs">
+                <div class="input-group">
+                    <label>Quantidade de lâmpadas</label>
+                    <input type="number" id="qtd-led" min="1" value="20" step="1" oninput="calcularLED()">
+                    <span class="input-help">Número total de lâmpadas que serão substituídas</span>
+                </div>
+                <div class="input-group">
+                    <label>Potência atual (Watts)</label>
+                    <input type="number" id="pot-atual" min="1" value="32" step="1" oninput="calcularLED()">
+                    <span class="input-help">Potência da lâmpada fluorescente (ex: 32W, 40W)</span>
+                </div>
+                <div class="input-group">
+                    <label>Potência LED (Watts)</label>
+                    <input type="number" id="pot-led" min="1" value="12" step="1" oninput="calcularLED()">
+                    <span class="input-help">Potência equivalente da lâmpada LED (ex: 12W, 15W)</span>
+                </div>
+                <div class="input-group">
+                    <label>Horas de uso diário</label>
+                    <input type="number" id="horas-led" min="1" max="24" value="12" step="0.5" oninput="calcularLED()">
+                    <span class="input-help">Quantas horas por dia as lâmpadas ficam acesas</span>
+                </div>
+                <div class="input-group">
+                    <label>Dias de uso por mês</label>
+                    <input type="number" id="dias-led" min="1" max="31" value="30" step="1" oninput="calcularLED()">
+                    <span class="input-help">Quantos dias por mês o comércio funciona</span>
+                </div>
+                <div class="input-group">
+                    <label>Custo do kWh (R$)</label>
+                    <input type="number" id="kwh-led" min="0.1" value="0.65" step="0.01" oninput="calcularLED()">
+                    <span class="input-help">Tarifa de energia elétrica por kWh (verifique na sua conta)</span>
+                </div>
+                <div class="input-group">
+                    <label>Preço unitário LED (R$)</label>
+                    <input type="number" id="preco-led" min="0" value="25" step="0.5" oninput="calcularLED()">
+                    <span class="input-help">Custo de cada lâmpada LED</span>
+                </div>
+            </div>
+
+            <div class="calc-result" id="result-led" style="display: none;">
+                <h4>Resultados da Análise</h4>
+                <div class="calc-results-grid">
+                    <div class="calc-result-item">
+                        <span class="label">Consumo Mensal Atual</span>
+                        <span class="value" id="consumo-atual-led">0 kWh</span>
+                    </div>
+                    <div class="calc-result-item">
+                        <span class="label">Consumo Mensal LED</span>
+                        <span class="value" id="consumo-led">0 kWh</span>
+                    </div>
+                    <div class="calc-result-item">
+                        <span class="label">Redução de Consumo</span>
+                        <span class="value" id="reducao-led">0%</span>
+                    </div>
+                    <div class="calc-result-item">
+                        <span class="label">Custo Atual/Mês</span>
+                        <span class="value" id="custo-atual-led">R$ 0</span>
+                    </div>
+                    <div class="calc-result-item">
+                        <span class="label">Custo LED/Mês</span>
+                        <span class="value" id="custo-led">R$ 0</span>
+                    </div>
+                    <div class="calc-result-item">
+                        <span class="label">Economia Mensal</span>
+                        <span class="value" id="economia-mensal-led">R$ 0</span>
+                    </div>
+                    <div class="calc-result-item">
+                        <span class="label">Economia Anual</span>
+                        <span class="value" id="economia-anual-led">R$ 0</span>
+                    </div>
+                    <div class="calc-result-item">
+                        <span class="label">Payback</span>
+                        <span class="value" id="payback-led">0 meses</span>
+                    </div>
+                </div>
+                <div class="total-box">
+                    <div class="total-label">Economia Total Mensal</div>
+                    <div class="total" id="total-led">R$ 0,00</div>
+                </div>
+            </div>
+
+            <div class="calc-formula">
+                <strong>Fórmula utilizada:</strong> Consumo (kWh) = (Potência × Quantidade × Horas × Dias) ÷ 1000<br>
+                Custo = Consumo × Tarifa kWh | Economia = Custo Atual - Custo LED | Payback = Investimento ÷ Economia Mensal
+            </div>
+        </div>
+
+        <!-- Calculadora Copos Retornáveis -->
+        <div id="calc-copos" class="calculator-panel">
+            <h3>Calculadora de Economia com Copos Retornáveis</h3>
+            <p class="description">
+                Calcule quanto você economiza ao incentivar o uso de copos retornáveis oferecendo desconto aos clientes. Compare o custo dos copos descartáveis com o valor do desconto oferecido.
+            </p>
+
+            <div class="calc-inputs">
+                <div class="input-group">
+                    <label>Copos descartáveis usados/mês</label>
+                    <input type="number" id="copos-descartaveis" min="0" value="1000" step="10" oninput="calcularCopos()">
+                    <span class="input-help">Quantidade média de copos descartáveis consumidos mensalmente</span>
+                </div>
+                <div class="input-group">
+                    <label>Custo por copo descartável (R$)</label>
+                    <input type="number" id="custo-copo" min="0.01" value="0.30" step="0.01" oninput="calcularCopos()">
+                    <span class="input-help">Custo unitário de cada copo descartável</span>
+                </div>
+                <div class="input-group">
+                    <label>Percentual de redução (%)</label>
+                    <input type="number" id="reducao-copos" min="0" max="100" value="50" step="5" oninput="calcularCopos()">
+                    <span class="input-help">% de clientes que passarão a usar copo retornável (estimativa)</span>
+                </div>
+                <div class="input-group">
+                    <label>Desconto por copo retornável (R$)</label>
+                    <input type="number" id="desconto-copo" min="0" value="0.50" step="0.05" oninput="calcularCopos()">
+                    <span class="input-help">Valor do desconto oferecido por cada copo retornável</span>
+                </div>
+            </div>
+
+            <div class="calc-result" id="result-copos" style="display: none;">
+                <h4>Resultados da Análise</h4>
+                <div class="calc-results-grid">
+                    <div class="calc-result-item">
+                        <span class="label">Copos Reduzidos/Mês</span>
+                        <span class="value" id="copos-reduzidos">0</span>
+                    </div>
+                    <div class="calc-result-item">
+                        <span class="label">Custo Atual/Mês</span>
+                        <span class="value" id="custo-atual-copos">R$ 0</span>
+                    </div>
+                    <div class="calc-result-item">
+                        <span class="label">Custo com Desconto/Mês</span>
+                        <span class="value" id="custo-desconto-copos">R$ 0</span>
+                    </div>
+                    <div class="calc-result-item">
+                        <span class="label">Economia Mensal</span>
+                        <span class="value" id="economia-mensal-copos">R$ 0</span>
+                    </div>
+                    <div class="calc-result-item">
+                        <span class="label">Economia Anual</span>
+                        <span class="value" id="economia-anual-copos">R$ 0</span>
+                    </div>
+                    <div class="calc-result-item">
+                        <span class="label">Redução Ambiental</span>
+                        <span class="value" id="reducao-ambiental">0 copos</span>
+                    </div>
+                </div>
+                <div class="total-box">
+                    <div class="total-label">Economia Total Mensal</div>
+                    <div class="total" id="total-copos">R$ 0,00</div>
+                </div>
+            </div>
+
+            <div class="calc-formula">
+                <strong>Fórmula utilizada:</strong> Copos Reduzidos = Copos Totais × (% Redução ÷ 100)<br>
+                Economia = (Copos Reduzidos × Custo Copo) - (Copos Reduzidos × Desconto) | Economia Anual = Economia Mensal × 12
+            </div>
+        </div>
+
+        <!-- Calculadora Horário de Pico -->
+        <div id="calc-horario" class="calculator-panel">
+            <h3>Calculadora de Economia com Gestão de Horário de Pico</h3>
+            <p class="description">
+                Calcule a economia ao deslocar o uso de equipamentos pesados para fora do horário de pico (18h às 21h). A energia elétrica é significativamente mais cara neste período.
+            </p>
+
+            <div class="calc-inputs">
+                <div class="input-group">
+                    <label>Consumo mensal médio (kWh)</label>
+                    <input type="number" id="consumo-mensal" min="100" value="1500" step="50" oninput="calcularHorario()">
+                    <span class="input-help">Consumo médio mensal de energia (verifique na sua conta de luz)</span>
+                </div>
+                <div class="input-group">
+                    <label>Custo kWh fora de pico (R$)</label>
+                    <input type="number" id="kwh-fora" min="0.1" value="0.55" step="0.01" oninput="calcularHorario()">
+                    <span class="input-help">Tarifa normal de energia (fora do horário de pico)</span>
+                </div>
+                <div class="input-group">
+                    <label>Custo kWh no pico (R$)</label>
+                    <input type="number" id="kwh-pico" min="0.1" value="0.66" step="0.01" oninput="calcularHorario()">
+                    <span class="input-help">Tarifa no horário de pico (20% mais cara - aprox. 18h-21h)</span>
+                </div>
+                <div class="input-group">
+                    <label>% de consumo no pico</label>
+                    <input type="number" id="percentual-pico" min="0" max="100" value="30" step="5" oninput="calcularHorario()">
+                    <span class="input-help">Percentual do consumo total que ocorre no horário de pico</span>
+                </div>
+                <div class="input-group">
+                    <label>% deslocável do pico</label>
+                    <input type="number" id="percentual-deslocavel" min="0" max="100" value="60" step="5" oninput="calcularHorario()">
+                    <span class="input-help">% do consumo no pico que pode ser deslocado para fora de pico</span>
+                </div>
+            </div>
+
+            <div class="calc-result" id="result-horario" style="display: none;">
+                <h4>Resultados da Análise</h4>
+                <div class="calc-results-grid">
+                    <div class="calc-result-item">
+                        <span class="label">Consumo no Pico (kWh)</span>
+                        <span class="value" id="consumo-pico">0</span>
+                    </div>
+                    <div class="calc-result-item">
+                        <span class="label">Consumo Fora de Pico (kWh)</span>
+                        <span class="value" id="consumo-fora-pico">0</span>
+                    </div>
+                    <div class="calc-result-item">
+                        <span class="label">kWh Deslocáveis</span>
+                        <span class="value" id="kwh-deslocaveis">0</span>
+                    </div>
+                    <div class="calc-result-item">
+                        <span class="label">Custo Atual/Mês</span>
+                        <span class="value" id="custo-atual-horario">R$ 0</span>
+                    </div>
+                    <div class="calc-result-item">
+                        <span class="label">Custo Otimizado/Mês</span>
+                        <span class="value" id="custo-otimizado-horario">R$ 0</span>
+                    </div>
+                    <div class="calc-result-item">
+                        <span class="label">Economia Mensal</span>
+                        <span class="value" id="economia-mensal-horario">R$ 0</span>
+                    </div>
+                    <div class="calc-result-item">
+                        <span class="label">Economia Anual</span>
+                        <span class="value" id="economia-anual-horario">R$ 0</span>
+                    </div>
+                    <div class="calc-result-item">
+                        <span class="label">Redução de Custo</span>
+                        <span class="value" id="reducao-custo-horario">0%</span>
+                    </div>
+                </div>
+                <div class="total-box">
+                    <div class="total-label">Economia Total Mensal</div>
+                    <div class="total" id="total-horario">R$ 0,00</div>
+                </div>
+            </div>
+
+            <div class="calc-formula">
+                <strong>Fórmula utilizada:</strong> Consumo Pico = Consumo Total × (% Pico ÷ 100)<br>
+                kWh Deslocáveis = Consumo Pico × (% Deslocável ÷ 100) | Economia = kWh Deslocáveis × (Tarifa Pico - Tarifa Fora Pico)
+            </div>
+        </div>
+
+        <div class="card" style="margin-top: 3rem;">
+            <h3>📊 Exemplo Prático: Padaria Dois Irmãos</h3>
+            <ul>
+                <li>20 lâmpadas LED (32W → 12W): Economia de R$ 180/mês</li>
+                <li>Redução de 1.000 copos descartáveis/mês (50%): Economia de R$ 300/mês</li>
+                <li>Deslocamento de 300 kWh do horário de pico: Economia de R$ 80/mês</li>
+                <li>Compostagem (redução de 40% do lixo orgânico): Economia de R$ 50/mês</li>
+                <li>Venda de óleo usado (30 litros/mês): Receita de R$ 30/mês</li>
+            </ul>
+            <div class="highlight" style="margin-top: 1rem;">
+                → <strong>ECONOMIA TOTAL: R$ 640/mês (R$ 7.680/ano)</strong>
+            </div>
+        </div>
     </section>
 
-    <section>
-        <div class="section-title" style="color:#3570b3;">Acredite: é possível viver melhor no digital — e este guia vai te mostrar como.</div>
-        
+    <!-- CASES DE SUCESSO -->
+    <section id="casos" class="container">
+        <div class="section-header">
+            <h2>🌟 Cases de Sucesso</h2>
+            <p class="subtitle">Quem Já Fez, Recomenda!</p>
+        </div>
+
+        <div class="testimonials">
+            <div class="testimonial">
+                <p>Na nossa lanchonete, trocamos todos os copos plásticos por desconto para quem traz o próprio. Em 2 meses, economizamos R$ 600 e os clientes adoraram! A iniciativa nos trouxe novos clientes preocupados com sustentabilidade.</p>
+                <div class="author">- Carlos Silva, Lanchonete Sabor do Ypê</div>
+            </div>
+            <div class="testimonial">
+                <p>As lâmpadas LED reduziram nossa conta de luz em R$ 200 mensais. O investimento se pagou em 4 meses! Além disso, o ambiente ficou mais agradável e moderno. Recomendo para todos os comerciantes.</p>
+                <div class="author">- Maria Santos, Mercado Bom Preço</div>
+            </div>
+            <div class="testimonial">
+                <p>Implementamos coleta seletiva e compostagem no nosso restaurante. Reduzimos 40% do lixo e ainda ganhamos adubo para nossa horta. Os clientes elogiam nossa postura sustentável e isso valoriza nossa marca.</p>
+                <div class="author">- Ana Costa, Restaurante Verde Vida</div>
+            </div>
+        </div>
     </section>
-    <div class="footer">
-       • Guia de Bem-Estar Digital • 
-    </div>
-  </div>
+
+    <!-- RECURSOS GRATUITOS -->
+    <section id="recursos" class="container">
+        <div class="section-header">
+            <h2>📞 Recursos Gratuitos</h2>
+            <p class="subtitle">Ajuda Disponível para Você</p>
+        </div>
+
+        <div class="resources-list">
+            <div class="resource-item">
+                <h4>🌱 SEBRAE</h4>
+                <p>Consultoria gratuita para pequenos negócios. Cursos, orientação empresarial e suporte na implementação de práticas sustentáveis.</p>
+                <p><strong>Telefone:</strong> 0800 570 0800</p>
+            </div>
+            <div class="resource-item">
+                <h4>⚡ EMATER</h4>
+                <p>Orientação sobre eficiência energética, uso racional de recursos e tecnologias sustentáveis para pequenos negócios.</p>
+                <p><strong>Website:</strong> www.emater.pr.gov.br</p>
+            </div>
+            <div class="resource-item">
+                <h4>🏛️ Prefeitura</h4>
+                <p>Coleta seletiva gratuita, selos verdes municipais, orientação sobre descarte correto e programas de incentivo.</p>
+                <p><strong>Secretaria de Meio Ambiente</strong></p>
+            </div>
+            <div class="resource-item">
+                <h4>♻️ Cooperativas</h4>
+                <p>Compra de materiais recicláveis, parcerias para coleta de óleo usado e resíduos diversos. Gere receita com seus resíduos!</p>
+                <p><strong>Busque cooperativas locais</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- NOSSO COMPROMISSO -->
+    <section class="container">
+        <div class="commitment">
+            <h2 style="color: var(--primary-green); margin-bottom: 2rem;">🌱 Nosso Compromisso</h2>
+            <p>Juntos, estamos transformando o Ypê em um bairro mais sustentável e economicamente forte. Cada pequena ação conta - e cada economia no seu caixa fortalece nossa comunidade!</p>
+            <p style="margin-top: 2rem; font-weight: 600;">A sustentabilidade não é apenas uma escolha ética, é também uma estratégia inteligente de negócios que reduz custos, aumenta a competitividade e constrói um futuro melhor para todos.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Plataforma Ypê Sustentável | Economia que Sustenta, Ação que Transforma</p>
+        <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">Desenvolvido para fortalecer o comércio local através de práticas sustentáveis</p>
+    </footer>
+
+    <script>
+        // Função para alternar entre calculadoras
+        function showCalculator(type, element) {
+            // Remove active de todas as tabs
+            document.querySelectorAll('.calc-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Remove active de todos os painéis
+            document.querySelectorAll('.calculator-panel').forEach(panel => {
+                panel.classList.remove('active');
+            });
+            
+            // Adiciona active na tab clicada
+            element.classList.add('active');
+            
+            // Mostra o painel correspondente
+            document.getElementById('calc-' + type).classList.add('active');
+        }
+
+        // Calculadora LED - Fórmulas profissionais baseadas em potência e energia
+        function calcularLED() {
+            const qtd = parseFloat(document.getElementById('qtd-led').value) || 0;
+            const potAtual = parseFloat(document.getElementById('pot-atual').value) || 0;
+            const potLED = parseFloat(document.getElementById('pot-led').value) || 0;
+            const horas = parseFloat(document.getElementById('horas-led').value) || 0;
+            const dias = parseFloat(document.getElementById('dias-led').value) || 0;
+            const kwh = parseFloat(document.getElementById('kwh-led').value) || 0;
+            const precoLED = parseFloat(document.getElementById('preco-led').value) || 0;
+
+            if (qtd === 0 || potAtual === 0 || potLED === 0 || horas === 0 || dias === 0 || kwh === 0) {
+                document.getElementById('result-led').style.display = 'none';
+                return;
+            }
+
+            // Cálculo do consumo em kWh
+            // Consumo = (Potência em Watts × Quantidade × Horas × Dias) ÷ 1000
+            const consumoAtual = (potAtual * qtd * horas * dias) / 1000;
+            const consumoLED = (potLED * qtd * horas * dias) / 1000;
+
+            // Custo mensal
+            const custoAtual = consumoAtual * kwh;
+            const custoLED = consumoLED * kwh;
+
+            // Economia
+            const economiaMensal = custoAtual - custoLED;
+            const economiaAnual = economiaMensal * 12;
+
+            // Redução percentual
+            const reducao = ((potAtual - potLED) / potAtual) * 100;
+
+            // Investimento e payback
+            const investimento = qtd * precoLED;
+            const payback = investimento > 0 && economiaMensal > 0 ? (investimento / economiaMensal) : 0;
+
+            // Atualiza resultados
+            document.getElementById('consumo-atual-led').textContent = consumoAtual.toFixed(2) + ' kWh';
+            document.getElementById('consumo-led').textContent = consumoLED.toFixed(2) + ' kWh';
+            document.getElementById('reducao-led').textContent = reducao.toFixed(1) + '%';
+            document.getElementById('custo-atual-led').textContent = 'R$ ' + custoAtual.toFixed(2);
+            document.getElementById('custo-led').textContent = 'R$ ' + custoLED.toFixed(2);
+            document.getElementById('economia-mensal-led').textContent = 'R$ ' + economiaMensal.toFixed(2);
+            document.getElementById('economia-anual-led').textContent = 'R$ ' + economiaAnual.toFixed(2);
+            document.getElementById('payback-led').textContent = payback > 0 ? payback.toFixed(1) + ' meses' : 'N/A';
+            document.getElementById('total-led').textContent = 'R$ ' + economiaMensal.toFixed(2);
+
+            document.getElementById('result-led').style.display = 'block';
+        }
+
+        // Calculadora Copos Retornáveis
+        function calcularCopos() {
+            const coposTotais = parseFloat(document.getElementById('copos-descartaveis').value) || 0;
+            const custoCopo = parseFloat(document.getElementById('custo-copo').value) || 0;
+            const reducaoPercent = parseFloat(document.getElementById('reducao-copos').value) || 0;
+            const desconto = parseFloat(document.getElementById('desconto-copo').value) || 0;
+
+            if (coposTotais === 0 || custoCopo === 0) {
+                document.getElementById('result-copos').style.display = 'none';
+                return;
+            }
+
+            // Copos reduzidos
+            const coposReduzidos = (coposTotais * reducaoPercent) / 100;
+
+            // Custo atual (sem desconto)
+            const custoAtual = coposTotais * custoCopo;
+
+            // Custo com desconto (copos reduzidos não usados + desconto dado)
+            const coposRestantes = coposTotais - coposReduzidos;
+            const custoComDesconto = (coposRestantes * custoCopo) + (coposReduzidos * desconto);
+
+            // Economia
+            const economiaMensal = custoAtual - custoComDesconto;
+            const economiaAnual = economiaMensal * 12;
+
+            // Atualiza resultados
+            document.getElementById('copos-reduzidos').textContent = Math.round(coposReduzidos);
+            document.getElementById('custo-atual-copos').textContent = 'R$ ' + custoAtual.toFixed(2);
+            document.getElementById('custo-desconto-copos').textContent = 'R$ ' + custoComDesconto.toFixed(2);
+            document.getElementById('economia-mensal-copos').textContent = 'R$ ' + economiaMensal.toFixed(2);
+            document.getElementById('economia-anual-copos').textContent = 'R$ ' + economiaAnual.toFixed(2);
+            document.getElementById('reducao-ambiental').textContent = Math.round(coposReduzidos * 12) + ' copos/ano';
+            document.getElementById('total-copos').textContent = 'R$ ' + economiaMensal.toFixed(2);
+
+            document.getElementById('result-copos').style.display = 'block';
+        }
+
+        // Calculadora Horário de Pico
+        function calcularHorario() {
+            const consumoTotal = parseFloat(document.getElementById('consumo-mensal').value) || 0;
+            const kwhFora = parseFloat(document.getElementById('kwh-fora').value) || 0;
+            const kwhPico = parseFloat(document.getElementById('kwh-pico').value) || 0;
+            const percentPico = parseFloat(document.getElementById('percentual-pico').value) || 0;
+            const percentDeslocavel = parseFloat(document.getElementById('percentual-deslocavel').value) || 0;
+
+            if (consumoTotal === 0 || kwhFora === 0 || kwhPico === 0) {
+                document.getElementById('result-horario').style.display = 'none';
+                return;
+            }
+
+            // Consumo no pico e fora do pico
+            const consumoPico = (consumoTotal * percentPico) / 100;
+            const consumoForaPico = consumoTotal - consumoPico;
+
+            // kWh que podem ser deslocados
+            const kwhDeslocaveis = (consumoPico * percentDeslocavel) / 100;
+
+            // Consumo otimizado (após deslocamento)
+            const consumoPicoOtimizado = consumoPico - kwhDeslocaveis;
+            const consumoForaPicoOtimizado = consumoForaPico + kwhDeslocaveis;
+
+            // Custo atual (antes da otimização)
+            const custoAtual = (consumoForaPico * kwhFora) + (consumoPico * kwhPico);
+
+            // Custo otimizado (após deslocamento)
+            const custoOtimizado = (consumoForaPicoOtimizado * kwhFora) + (consumoPicoOtimizado * kwhPico);
+
+            // Economia
+            const economiaMensal = custoAtual - custoOtimizado;
+            const economiaAnual = economiaMensal * 12;
+            const reducaoCusto = (economiaMensal / custoAtual) * 100;
+
+            // Atualiza resultados
+            document.getElementById('consumo-pico').textContent = consumoPico.toFixed(2) + ' kWh';
+            document.getElementById('consumo-fora-pico').textContent = consumoForaPico.toFixed(2) + ' kWh';
+            document.getElementById('kwh-deslocaveis').textContent = kwhDeslocaveis.toFixed(2) + ' kWh';
+            document.getElementById('custo-atual-horario').textContent = 'R$ ' + custoAtual.toFixed(2);
+            document.getElementById('custo-otimizado-horario').textContent = 'R$ ' + custoOtimizado.toFixed(2);
+            document.getElementById('economia-mensal-horario').textContent = 'R$ ' + economiaMensal.toFixed(2);
+            document.getElementById('economia-anual-horario').textContent = 'R$ ' + economiaAnual.toFixed(2);
+            document.getElementById('reducao-custo-horario').textContent = reducaoCusto.toFixed(1) + '%';
+            document.getElementById('total-horario').textContent = 'R$ ' + economiaMensal.toFixed(2);
+
+            document.getElementById('result-horario').style.display = 'block';
+        }
+
+        // Executa cálculos iniciais ao carregar
+        window.addEventListener('DOMContentLoaded', function() {
+            calcularLED();
+        });
+
+        // Smooth scroll para links de navegação
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Animação de entrada para cards
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card, .testimonial, .resource-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
